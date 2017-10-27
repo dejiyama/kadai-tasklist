@@ -1,0 +1,8 @@
+<h1>メッセージ一覧</h1>
+<ul>
+  <% @tasklists.eace do|tasklist| %>
+  <li><%= link_to tasklist.id,tasklist %>:<%= tasklist.content %></li>
+  <% end %>
+</ul>
+
+<%= link_to '新規メッセージの投稿', new_message_path %>
